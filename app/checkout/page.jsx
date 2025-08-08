@@ -10,8 +10,8 @@ export default function CheckoutPage() {
   const handleCardSelect = (type) => {
     setCardType(type);
     if (type === 'Visa') setCardImage('/visa.svg');
-    if (type === 'Master Card') setCardImage('https://dl.dropboxusercontent.com/s/2vbqk5lcpi7hjoc/MasterCard_Logo.svg.png');
-    if (type === 'American Express') setCardImage('https://dl.dropboxusercontent.com/s/f5hyn6u05ktql8d/amex-icon-6902.png');
+    if (type === 'Master Card') setCardImage('/mastercard.svg');
+    if (type === 'American Express') setCardImage('/logo-american-express-cards-bank-insurance-png-favpng-dTeZFB0nXTzxrPHN9aVZaUns8-fotor-bg-remover-2025080820522.png');
   };
 
   return (
@@ -35,7 +35,7 @@ export default function CheckoutPage() {
           </div>
           <div className="flex justify-between font-bold text-lg">
             <span>TOTAL</span>
-            <span>$29.99</span>
+            <span>$39.99</span>
           </div>
         </div>
 
