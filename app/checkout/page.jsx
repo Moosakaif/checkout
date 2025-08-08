@@ -22,7 +22,7 @@ export default function CheckoutPage() {
           <h2 className="text-2xl font-bold mb-4">Order Summary</h2>
           <div className="border-t mb-4" />
           <div className="flex items-center mb-4">
-            <img src="/services-5.png" alt="Service" className="w-16 h-16 object-cover mr-4" />
+            <img src="/services-5.png" alt="Service" className="w-14 h-10 object-cover mr-4" />
             <div className="flex-grow">
               <p className="font-semibold">Basic Vehicle Report</p>
             </div>
