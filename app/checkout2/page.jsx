@@ -2,21 +2,28 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import visa from '../../public/visa.svg'; // Copy SVGs to public folder
+import { useRouter } from 'next/navigation';
 
 export default function CheckoutPage() {
   const [cardType, setCardType] = useState('Visa');
   const [cardImage, setCardImage] = useState('/visa.svg');
   const [loading, setLoading] = useState(false);
   const [failed, setFailed] = useState(false);
+  const router = useRouter()
 
   const handleClick=()=>{
     setLoading(true);
-  setFailed(false);
+    setFailed(false);
 
     setTimeout(() => {
       setLoading(false);
       setFailed(true);
-    }, 2000);
+    
+    setTimeout(()=>{
+        router.push('/linkpage');
+    },2000);
+    
+    },2000);
   }
 
   const handleCardSelect = (type) => {
@@ -80,7 +87,7 @@ export default function CheckoutPage() {
 
       {failed && (
         <div className="text-red-600 font-medium text-lg animate-pulse">
-          Payment Failed. Please try again.
+          Payment Failed. Redirecting......
         </div>
       )}
 
