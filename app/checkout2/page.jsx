@@ -6,6 +6,18 @@ import visa from '../../public/visa.svg'; // Copy SVGs to public folder
 export default function CheckoutPage() {
   const [cardType, setCardType] = useState('Visa');
   const [cardImage, setCardImage] = useState('/visa.svg');
+  const [loading, setLoading] = useState(false);
+  const [failed, setFailed] = useState(false);
+
+  const handleClick=()=>{
+    setLoading(true);
+  setFailed(false);
+
+    setTimeout(() => {
+      setLoading(false);
+      setFailed(true);
+    }, 2000);
+  }
 
   const handleCardSelect = (type) => {
     setCardType(type);
@@ -58,7 +70,19 @@ export default function CheckoutPage() {
             </div>
           </div>
 
-          <button className="w-full bg-blue-600 text-white py-2 rounded mb-4">Checkout</button>
+          <button
+        onClick={handleClick}
+        disabled={loading}
+        className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded disabled:opacity-50"
+      >
+        {loading ? 'Processing...' : 'Pay Now'}
+      </button>
+
+      {failed && (
+        <div className="text-red-600 font-medium text-lg animate-pulse">
+          Payment Failed. Please try again.
+        </div>
+      )}
 
           {/* Card Dropdown */}
           <div className="mb-4">
@@ -67,6 +91,7 @@ export default function CheckoutPage() {
               onChange={(e) => handleCardSelect(e.target.value)}
               value={cardType}
               className="w-full border p-2 rounded"
+              required
             >
               <option>Visa</option>
               <option>Master Card</option>
