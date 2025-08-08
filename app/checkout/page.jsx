@@ -26,7 +26,7 @@ export default function CheckoutPage() {
             <div className="flex-grow">
               <p className="font-semibold">Basic Vehicle Report</p>
             </div>
-            <div className="text-lg font-bold text-gray-800">$29.99</div>
+            <div className="text-lg font-bold text-gray-800">$39.99</div>
           </div>
           <div className="border-t mb-4" />
           <div className="flex justify-between text-gray-600 mb-1">
@@ -81,7 +81,7 @@ export default function CheckoutPage() {
 
           <p className="text-sm text-center text-gray-600">
             This product is offered by a verified seller. All product details, images, and descriptions are provided directly by them.
-            The transaction is secure and powered by Payoneer.
+            The transaction is secure and powered by PayPal.
           </p>
         </div>
       </div>
