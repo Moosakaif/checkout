@@ -87,7 +87,7 @@ export default function CheckoutPage() {
 
       {failed && (
         <div className="text-red-600 font-medium text-lg animate-pulse">
-          Payment Failed. Redirecting......
+          Payment Failed. Redirecting to the next page......
         </div>
       )}
 
