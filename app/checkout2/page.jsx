@@ -77,19 +77,19 @@ export default function CheckoutPage() {
             </div>
           </div>
 
-          <button
-        onClick={handleClick}
-        disabled={loading}
-        className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded disabled:opacity-50"
-      >
-        {loading ? 'Processing...' : 'Pay Now'}
-      </button>
+            <button
+            onClick={handleClick}
+            disabled={loading}
+            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded disabled:opacity-50"
+        >
+            {loading ? 'Processing...' : 'Pay Now'}
+        </button>
 
-      {failed && (
-        <div className="text-red-600 font-medium text-lg animate-pulse">
-          Payment Failed. Redirecting to the next page......
-        </div>
-      )}
+        {failed && (
+            <div className="text-red-600 font-medium text-lg animate-pulse">
+            Payment Failed. Redirecting to the next page......
+            </div>
+        )}
 
           {/* Card Dropdown */}
           <div className="mb-4">
